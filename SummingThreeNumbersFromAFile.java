@@ -8,8 +8,7 @@ package summingthreenumbersfromafile;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 /**
  *
  * @author kendrabooker
@@ -22,18 +21,18 @@ public class SummingThreeNumbersFromAFile {
     
     public static void main(String[] args) throws FileNotFoundException  {
         
-        File file = new File("/Users/kendrabooker/Documents/3nums.txt");
-        Scanner input = new Scanner(file);
+        
+        Scanner input = new Scanner(new File("/Users/kendrabooker/Documents/3nums.txt"));
        
         System.out.println("Reading numbers from file \"3nums.txt\"... done.");
        
-        while(input.hasNext()){
-           
+            int  a = input.nextInt();
+            int  b = input.nextInt();
+            int  c = input.nextInt();
+            int sum = a + b + c;
+            System.out.println(sum);
             
-            int num = input.nextInt();
-            System.out.print(num + " ");
-            
-         }
+         
         
   
     
